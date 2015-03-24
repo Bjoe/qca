@@ -1,0 +1,8 @@
+To cross compile on Blackberry:
+
+Download bbndk from developer.blackberry.com and checkout blackberry.toolchain.cmake.
+
+Then execute:
+
+$ source .../bbndk/bbndk-env_X_Y.sh
+$ cmake -DCMAKE_TOOLCHAIN_FILE=.../blackberry.toolchain.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=... -D_OPENSSL_ROOT_HINTS_AND_PATHS=.../bbndk/target_X_Y/qnx6/armle-v7/usr -DBUILD_TESTS=off -DBUILD_TOOLS=off .../QCA

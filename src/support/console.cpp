@@ -32,6 +32,8 @@
 #else
 # ifdef Q_OS_ANDROID
 #  include <termios.h>
+# elif __QNX__
+#  include <termios.h>
 # else
 #  include <sys/termios.h>
 # endif
